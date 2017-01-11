@@ -8,7 +8,7 @@ public class Toto_Project {
 		Random rand = new Random();
 		// creating an array with no duplicates
 		for (int arrayRandNumGenerator = 0; arrayRandNumGenerator < arrRand.length; arrayRandNumGenerator++) {
-			int randNum = rand.nextInt(49) + 1; // 7x7
+			int randNum = rand.nextInt(49) + 1; 
 			arrRand[arrayRandNumGenerator] = randNum;
 			for (int duplicateCorrector = 0; duplicateCorrector < arrayRandNumGenerator; duplicateCorrector++) {
 				if (arrRand[arrayRandNumGenerator] == arrRand[duplicateCorrector]) {
