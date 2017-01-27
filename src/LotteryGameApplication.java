@@ -143,8 +143,8 @@ public class LotteryGameApplication {
 		lblIii.setBounds(65, 330, 100, 20);
 		frame.getContentPane().add(lblIii);
 
-		startButton = new JButton("бвРав");
-		startButton.setFont(new Font("Rockwell Extra Bold", Font.BOLD | Font.ITALIC, 11));
+		startButton = new JButton("CTAPT");
+		startButton.setFont(new Font("Sitka Banner", Font.BOLD | Font.ITALIC, 18));
 		startButton.setBackground(Color.WHITE);
 		startButton.setForeground(new Color(0, 153, 0));
 		
