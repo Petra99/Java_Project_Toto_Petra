@@ -75,13 +75,7 @@ public class LotteryGameApplication {
 				userNumbers = testingAreThereNumbersOnly(userSplittedTextToString, userNumbers);
 				int[] userSortedArray = bubbleSorting(userNumbers);
 				testingAreThereEqualNums(userSortedArray);
-				for (int i = 0; i < arrayLenght; i++) {
-					if (userSortedArray[i] < 1 || userSortedArray[i] > 50) {
-						JOptionPane.showMessageDialog(null, "Въведете само числа от 1 до 49.", "Грешно въведени данни",
-								JOptionPane.ERROR_MESSAGE);
-						System.exit(0);
-					}
-				}
+				testingAreNumsFrom1To49(userSortedArray);
 
 				// finding how many guessed numbers user has in each round.
 				int guessedNumsRoundOne = compareArrays(userSortedArray, arrRand_1);
@@ -143,7 +137,7 @@ public class LotteryGameApplication {
 		lblIii.setBounds(65, 330, 100, 20);
 		frame.getContentPane().add(lblIii);
 
-		startButton = new JButton("CTAPT");
+		startButton = new JButton("\u0421\u0422\u0410\u0420\u0422");
 		startButton.setFont(new Font("Sitka Banner", Font.BOLD | Font.ITALIC, 18));
 		startButton.setBackground(Color.WHITE);
 		startButton.setForeground(new Color(0, 153, 0));
@@ -330,6 +324,15 @@ public class LotteryGameApplication {
 		return userArrayWithInts;
 	}
 
+	private void testingAreNumsFrom1To49(int[] userSortedArray) {
+		for (int i = 0; i < arrayLenght; i++) {
+			if (userSortedArray[i] < 1 || userSortedArray[i] > 50) {
+				JOptionPane.showMessageDialog(null, "Въведете само числа от 1 до 49.", "Грешно въведени данни",
+						JOptionPane.ERROR_MESSAGE);
+				System.exit(0);
+			}
+		}
+	}
 	private static int compareArrays(int[] userArray, int[] randArray) {
 		int coincidence = 0;
 		for (int userNumsIndex = 0; userNumsIndex < userArray.length; userNumsIndex++) {
