@@ -144,7 +144,8 @@ public class LotteryGameApplication {
 		frame.getContentPane().add(lblIii);
 
 		startButton = new JButton("бвРав");
-		startButton.setBackground(new Color(204, 255, 153));
+		startButton.setFont(new Font("Rockwell Extra Bold", Font.BOLD | Font.ITALIC, 11));
+		startButton.setBackground(Color.WHITE);
 		startButton.setForeground(new Color(0, 153, 0));
 		
 		startButton.setBounds(241, 171, 124, 30);
